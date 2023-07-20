@@ -1,20 +1,22 @@
 
-# Developer Kickstart Week 2: Flow Control, Loops, and Collections
+# Developer Kickstart Week 5: Salesforce Object Query Language (SOQL)
 
-This project is part of the Developer Kickstart Week 2 curriculum at Cloud Code Academy. It is designed to help beginner Salesforce developers learn and practice flow control, loops, and collections in the Apex programming language.
+This project is part of the Developer Kickstart Week 5 curriculum at Cloud Code Academy. It's crafted to assist beginner Salesforce developers to learn and exercise Salesforce Object Query Language (SOQL), a pivotal aspect of the Apex programming language.
 
 ## Goals of the Practice
 
-Through this practice project, you will gain foundational knowledge about:
+In the course of this practice project, you'll build essential knowledge about:
+- Understanding the fundamentals of SOQL and its significance in Apex and Salesforce development.
+- Crafting basic SOQL queries using the SELECT statement to retrieve data from Salesforce objects.
+- Employing WHERE clause filters in SOQL queries to refine the data retrieved based on specific conditions.
+- Navigating relationship queries in SOQL to retrieve data from related Salesforce objects.
+- Using the LIMIT keyword in SOQL queries to regulate the number of records retrieved.
 
-- Flow control mechanisms in Apex, such as if-else statements and switch statements, to control the execution path based on conditions.
-- Looping constructs in Apex, such as for loops, while loops, and do-while loops, to iterate over a set of statements or a collection of elements.
-- Working with collections in Apex, including lists, sets, and maps, to store and manipulate data efficiently.
-
-By mastering flow control, loops, and collections, you will enhance your ability to write flexible and powerful Apex code. These concepts are fundamental to building robust and efficient solutions in Salesforce.
+By mastering SOQL, you will boost your ability to interact with Salesforce data programmatically, enabling you to build dynamic, data-driven applications on the Salesforce platform. These concepts lay the foundation for advanced data manipulation and handling techniques in Salesforce.
 
 ## Setup
-[Video Overview](https://vimeo.com/839597882/46fc06d93e)
+[Beginner Setup Overview Video](https://vimeo.com/839597882/46fc06d93e)
+[Intermediate Setup Overview Video](https://vimeo.com/839597882/46fc06d93e)
 
 To get started, you'll need a Salesforce Trailhead Playground. If you don't have one, you can create it for free from any Trailhead module.
 
