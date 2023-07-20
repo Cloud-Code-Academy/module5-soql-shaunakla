@@ -5,7 +5,7 @@ This project is part of the Developer Kickstart Week 5 curriculum at Cloud Code 
 
 ## Goals of the Practice
 
-In the course of this practice project, you'll build essential knowledge about:
+In the course  of this practice project, you'll build essential knowledge about:
 - Understanding the fundamentals of SOQL and its significance in Apex and Salesforce development.
 - Crafting basic SOQL queries using the SELECT statement to retrieve data from Salesforce objects.
 - Employing WHERE clause filters in SOQL queries to refine the data retrieved based on specific conditions.
@@ -16,7 +16,8 @@ By mastering SOQL, you will boost your ability to interact with Salesforce data 
 
 ## Setup
 [Beginner Setup Overview Video](https://vimeo.com/839597882/46fc06d93e)
-[Intermediate Setup Overview Video](https://vimeo.com/839597882/46fc06d93e)
+
+[Intermediate Setup Overview Video](https://vimeo.com/847130413/955b8bdbe2)
 
 To get started, you'll need a Salesforce Trailhead Playground. If you don't have one, you can create it for free from any Trailhead module.
 
