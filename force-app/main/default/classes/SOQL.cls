@@ -57,7 +57,7 @@ public with sharing class SOQL {
      * Returns List of closed won opportuntiies for a specific Account.
      * Example: yourMethodName('001XXXXXXXXXXXX') should return the list of closed won opportunities for the Account with the Id
      * @param accountId The ID of the Account.
-     * @return A list of Opportunities with imporant opportunies fields
+     * @return A list of Opportunities with important opportunities fields
      * Update the corresponding test class and testGetClosedWonOpportunityCountByAccount method to cover this method
      */
     //[public | private ] [static] data_type method_name (input parameters) {
