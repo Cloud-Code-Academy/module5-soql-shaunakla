@@ -26,6 +26,10 @@ jobs:
               run: |
                   sf force auth sfdxurl store -f sfdxauth.txt -a org
 
+            - name: Deploy objects
+              run: |
+                  sf force source deploy -u org -p force-app/main/default/objects/
+
             - name: Deploy classes to org
               run: |
                   sf force source deploy -u org -p force-app/main/default/classes/
