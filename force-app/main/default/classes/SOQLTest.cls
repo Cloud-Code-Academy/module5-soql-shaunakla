@@ -242,14 +242,14 @@ public with sharing class SOQLTest {
     static void testGetLeadsBySourceOrDescription() {
         // Create test data
         Lead testLead1 = new Lead(LastName = 'Test Lead 1', Company = 'Test Company 1', Phone = '1234567890', Email = 'lead1@email.com', LeadSource = 'Web', Title = 'Manager');
-        Lead testLead2 = new Lead(LastName = 'Test Lead 2', Company = 'Test Company 2', Phone = '0987654321', Email = 'lead2@email.com', LeadSource = 'Phone', Title = 'Keyword Title');
+        Lead testLead2 = new Lead(LastName = 'Test Lead 2', Company = 'Test Company 2', Phone = '0987654321', Email = 'lead2@email.com', LeadSource = 'Phone', Title = 'Engineer Lead');
         Lead testLead3 = new Lead(LastName = 'Test Lead 3', Company = 'Test Company 3', Phone = '1234567890', Email = 'lead3@email.com', LeadSource = 'Email', Title = 'Director');
-        Lead testLead4 = new Lead(LastName = 'Test Lead 4', Company = 'Test Company 4', Phone = '0987654321', Email = 'lead4@email.com', LeadSource = 'Web', Title = 'Title Keyword');
+        Lead testLead4 = new Lead(LastName = 'Test Lead 4', Company = 'Test Company 4', Phone = '0987654321', Email = 'lead4@email.com', LeadSource = 'Web', Title = 'Sr Engineer');
         Lead testLead5 = new Lead(LastName = 'Test Lead 5', Company = 'Test Company 5', Phone = '1234567890', Email = '', LeadSource = '', Title = '');
         insert new List<Lead>{testLead1, testLead2, testLead3, testLead4};
 
         // Call the method to test
-        List<Lead> leads = null; //Replace null with your method passing 'Web', 'Keyword' 
+        List<Lead> leads = null; //Replace null with your method passing 'Web', 'Engineer' 
 
         // Assert that the number of leads returned is correct
         System.assertEquals(3, leads.size(), 'Number of leads returned is incorrect.');

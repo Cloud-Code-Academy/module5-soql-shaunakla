@@ -115,7 +115,7 @@ public with sharing class SOQL {
     /**
      * Update/Uncomment the template code to create a method
      * Retrieves all Leads that have a specific Lead Source or contain a specific keyword in their Title.
-     * Example: yourMethodName('Lead Source', 'keyword') should return all Leads that have 'Lead Source' in their Lead Source or 'keyword' in their Title.
+     * Example: yourMethodName('Web', 'Engineer') should return all Leads that have 'Web' in their Lead Source or 'Engineer' in their Title.
      * @param leadSource The Lead Source to search for.
      * @param keyword The keyword to search for in the Lead Title.
      * @return A list of Lead records.
