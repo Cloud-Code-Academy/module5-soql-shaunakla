@@ -499,35 +499,6 @@ public with sharing class SOQLTest {
     }
 
     @IsTest
-    static void testGetOpportunityDetailsForClosedWon() {
-        // Create test data
-        Account testAccount1 = new Account(Name = 'Test Account 1');
-        insert testAccount1;
-        
-        User testUser = [SELECT Id FROM User WHERE IsActive = true LIMIT 1];
-
-        Opportunity testOpportunity1 = new Opportunity(Name = 'Test Opportunity 1', AccountId = testAccount1.Id, StageName = 'Closed Won', CloseDate = Date.today(), OwnerId = testUser.Id);
-        Opportunity testOpportunity2 = new Opportunity(Name = 'Test Opportunity 2', AccountId = testAccount1.Id, StageName = 'Open', CloseDate = Date.today(), OwnerId = testUser.Id);
-        insert new List<Opportunity>{testOpportunity1, testOpportunity2};
-
-        // Call the method to test
-        List<Opportunity> opportunities = SOQL.getOpportunityDetailsForClosedWon();
-
-        // Assert that the number of opportunities returned is correct
-        System.assertEquals(1, opportunities.size(), 'Number of opportunities returned is incorrect.');
-
-        // Assert that the opportunity returned is correct
-        try {
-            System.assert(opportunities[0].Id == testOpportunity1.Id, 'Returned opportunity ID is incorrect.');
-            System.assert(opportunities[0].Name == 'Test Opportunity 1', 'Returned opportunity name is incorrect.');
-            System.assert(opportunities[0].AccountId == testAccount1.Id, 'Returned account ID is incorrect.');
-            System.assert(opportunities[0].OwnerId == testUser.Id, 'Returned owner ID is incorrect.');
-        } catch (Exception ex) {
-            Assert.fail('Exception thrown: ' + ex.getMessage());
-        }
-    }
-
-    @IsTest
     static void testGetAccountNameForContact() {
         // Create test data
         Account testAccount1 = new Account(Name = 'Test Account 1');
@@ -723,6 +694,35 @@ public with sharing class SOQLTest {
         // Assert that the line items were cloned correctly
         System.assertEquals(1, clonedLineItems.size(), 'Number of cloned line items is incorrect.');
         System.assertEquals(100, clonedLineItems[0].UnitPrice, 'Cloned line item UnitPrice is incorrect.');
+    }
+
+    @IsTest
+    static void testGetOpportunityDetailsForClosedWon() {
+        // Create test data
+        Account testAccount1 = new Account(Name = 'Test Account 1');
+        insert testAccount1;
+        
+        User testUser = [SELECT Id FROM User WHERE IsActive = true LIMIT 1];
+
+        Opportunity testOpportunity1 = new Opportunity(Name = 'Test Opportunity 1', AccountId = testAccount1.Id, StageName = 'Closed Won', CloseDate = Date.today(), OwnerId = testUser.Id);
+        Opportunity testOpportunity2 = new Opportunity(Name = 'Test Opportunity 2', AccountId = testAccount1.Id, StageName = 'Open', CloseDate = Date.today(), OwnerId = testUser.Id);
+        insert new List<Opportunity>{testOpportunity1, testOpportunity2};
+
+        // Call the method to test
+        List<Opportunity> opportunities = SOQL.getOpportunityDetailsForClosedWon();
+
+        // Assert that the number of opportunities returned is correct
+        System.assertEquals(1, opportunities.size(), 'Number of opportunities returned is incorrect.');
+
+        // Assert that the opportunity returned is correct
+        try {
+            System.assert(opportunities[0].Id == testOpportunity1.Id, 'Returned opportunity ID is incorrect.');
+            System.assert(opportunities[0].Name == 'Test Opportunity 1', 'Returned opportunity name is incorrect.');
+            System.assert(opportunities[0].AccountId == testAccount1.Id, 'Returned account ID is incorrect.');
+            System.assert(opportunities[0].OwnerId == testUser.Id, 'Returned owner ID is incorrect.');
+        } catch (Exception ex) {
+            Assert.fail('Exception thrown: ' + ex.getMessage());
+        }
     }
 
     @IsTest

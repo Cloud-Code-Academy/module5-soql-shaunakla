@@ -17,14 +17,13 @@
 * be prepared to handle data retrieval tasks in Salesforce development.
 * 
 * @author Your Name
-* @version 1.0
 */
 
 public with sharing class SOQL {
     
     /** 
      * Update/Uncomment the template code to create a method
-     * Returns all leads in Salesforc Org
+     * Returns all leads from Salesforce Org
      * @return List of all leads with Id, LastName, Company, Phone, Email
      * Update the corresponding test class and testGetAllLeads method to cover this method
      */
@@ -54,7 +53,7 @@ public with sharing class SOQL {
 
     /**
      * Update/Uncomment the template code to create a method
-     * Returns List of closed won opportuntiies for a specific Account.
+     * Returns List of closed won opportunities for a specific Account.
      * Example: yourMethodName('001XXXXXXXXXXXX') should return the list of closed won opportunities for the Account with the Id
      * @param accountId The ID of the Account.
      * @return A list of Opportunities with important opportunities fields
@@ -145,7 +144,7 @@ public with sharing class SOQL {
     }
 
     /**
-     * Returns the total revenue for all Opportunities in a specific Stage or if the amountis greater than 10000.
+     * Returns the total revenue for all Opportunities in a specific Stage or if the amount is greater than 10000.
      * Example: getTotalRevenueByStage('Closed Won') should return the total revenue for all Opportunities in the 'Closed Won' Stage.
      * @param stage The Stage value to filter Opportunities.
      * @return The total revenue.
@@ -174,7 +173,7 @@ public with sharing class SOQL {
     }
     
     /**
-     * Retrieves the Contacts with the earliest Birthdate, ordered by Birthdate in descending order, and limited to 3 records.
+     * Retrieves the Contacts with the most recent Birthdate, ordered by Birthdate, and limited to 3 records.
      * @return A list of Contacts
      */
     public static List<Contact> getBirthdateContacts() {
@@ -182,8 +181,8 @@ public with sharing class SOQL {
     }
     
     /**
-     * Retrieves the Cases with a specific Status, ordered by CreatedDate, and limited to 10 records with an offset of 5.
-     * @return A list of Cases with a specific Status, ordered by CreatedDate, and limited to 10 records with an offset of 5.
+     * Retrieves the Cases in the Open Status, ordered by CreatedDate, and limited to 10 records with an offset of 5.
+     * @return A list of Cases
      */
     public static List<Case> getCasesWithStatus() {
         return null; // Replace null with the variable you used to store the result
@@ -224,15 +223,6 @@ public with sharing class SOQL {
     }
 
     /**
-     * Retrieves the Opportunity Name, Account Name, and Owner Name for Opportunities that have a Stage of 'Closed Won'.
-     * Example: getOpportunityDetailsForClosedWon()
-     * @return A list of filtered Opportunity
-     */
-    public static List<Opportunity> getOpportunityDetailsForClosedWon() {        
-        return null; // Replace null with the variable you used to store the result
-    }
-
-    /**
      * Retrieves the Account Name for a given Contact.
      * Example: getAccountNameForContact('003XXXXXXXXXXXX') should return the Account Name for the Contact with the Id
      * @param contactId The Id of the Contact.
@@ -253,7 +243,7 @@ public with sharing class SOQL {
     }
 
     /**
-     * Retrieves all contacts that have the Mailing State Similiar to the Account Billing State.
+     * Retrieves all contacts that have the Mailing State similar to the Account Billing State.
      * Example: getAccountsWithContactsByState('001XXXXXXXXXXXX') should return a list of Contacts that have the same Mailing State as the Account with the Id
      * @param Account Id
      * @return A list of maps containing the Account's MailingState and the related Contacts.
@@ -268,7 +258,8 @@ public with sharing class SOQL {
     }
 
     /**
-     * Retrieves all list of Leads, extracts email domains from them, and finds Accounts with matching website domains
+     * Extracts email domains from them leads, then finds Accounts with matching website domains
+     * If Lead Email = test@test.com return account with website = test.com
      * Example: findContactsByLeadEmailDomains([set of lead ids]) should return a list of Accounts with matching email domains
      * @param A list of Lead Ids.
      * @return A list of Accounts with matching email domains.
@@ -297,7 +288,6 @@ public with sharing class SOQL {
      * Example: cloneLineItems('001XXXXXXXXXXXX', [list of opportunity ids]) should clone the line items from the Opportunity with the Id to each Opportunity in the list
      * @param Original Opportunity Id
      * @param List of cloned Opportunity Ids
-     * @return void.
      */
     public static void cloneLineItems(Id origOppId, List<Id> cloneOppIds) {
         // Query the original Opportunity Line Items
@@ -316,10 +306,18 @@ public with sharing class SOQL {
     }
     
     /**
+     * Retrieves the Opportunity Name, Account Name, and Owner Name for Opportunities that have a Stage of 'Closed Won'.
+     * Example: getOpportunityDetailsForClosedWon()
+     * @return A list of filtered Opportunity
+     */
+    public static List<Opportunity> getOpportunityDetailsForClosedWon() {        
+        return null; // Replace null with the variable you used to store the result
+    }
+
+    /**
      * Sets the 'Primary_Contact__c' field for the provided Opportunities from the first related Contact of the Account, ordered by first name.
      * Example: setPrimaryContact() should set the 'Primary_Contact__c' field for every Opportunity in the org
      * @param A list of 'Closed Won' Opportunities.
-     * @return void.
      */
     public static void setPrimaryContact() {
         //Use the getOpportunityDetailsForClosedWon() method to get the Opportunities
