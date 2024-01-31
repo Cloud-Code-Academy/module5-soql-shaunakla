@@ -21,7 +21,8 @@
 
 public with sharing class SOQL {
     
-    /** 
+    /**
+     * Question 1
      * Update/Uncomment the template code to create a method
      * Returns all leads from Salesforce Org
      * @return List of all leads with Id, LastName, Company, Phone, Email
@@ -32,6 +33,7 @@ public with sharing class SOQL {
     //}
 
     /**
+     * Question 2
      * Update/Uncomment the template code to create a method
      * Returns all contacts with first name of John.
      * @return A list of Contact records.
@@ -42,6 +44,7 @@ public with sharing class SOQL {
     //}
 
     /**
+     * Question 3
      * Update/Uncomment the template code to create a method
      * Returns the Contact Id for all contacts with last name of Smith or Jones
      * @return A list of Contact Ids.
@@ -52,6 +55,7 @@ public with sharing class SOQL {
     //}
 
     /**
+     * Question 4
      * Update/Uncomment the template code to create a method
      * Returns List of closed won opportunities for a specific Account.
      * Example: yourMethodName('001XXXXXXXXXXXX') should return the list of closed won opportunities for the Account with the Id
@@ -64,6 +68,7 @@ public with sharing class SOQL {
     //}
 
     /**
+     * Question 5
      * Update/Uncomment the template code to create a method
      * Returns the total count of Account records.
      * @return The Integer count of Account records.
@@ -74,6 +79,7 @@ public with sharing class SOQL {
     //}
 
     /**
+     * Question 6
      * Update/Uncomment the template code to create a method
      * Return Key Value pair of Task Id and Task records for any tasks due date within the next 7 days.
      * @return A map of Task Ids to Task records.
@@ -84,6 +90,7 @@ public with sharing class SOQL {
     //}
 
     /**
+     * Question 7
      * Update/Uncomment the template code to create a method
      * Retrieves all Contacts that have a example.com domain in their Email.
      * @return A list of Contact records.
@@ -94,6 +101,7 @@ public with sharing class SOQL {
     //}
 
     /**
+     * Question 8
      * Retrieves all Opportunities that have a specific keyword in their Name.
      * Example: getOpportunitiesByNameKeyword('keyword') should return all Opportunities that have 'keyword' in their Name.
      * @param keyword The keyword to search for in the Opportunity Name.
@@ -104,6 +112,7 @@ public with sharing class SOQL {
     }
 
     /**
+     * Question 9
      * Retrieves all Cases that Case Origin is not Web or Email or Blank
      * @return A list of Case records.
      */
@@ -112,6 +121,7 @@ public with sharing class SOQL {
     }
 
     /**
+     * Question 10
      * Update/Uncomment the template code to create a method
      * Retrieves all Leads that have a specific Lead Source or contain a specific keyword in their Title.
      * Example: yourMethodName('Web', 'Engineer') should return all Leads that have 'Web' in their Lead Source or 'Engineer' in their Title.
@@ -125,6 +135,7 @@ public with sharing class SOQL {
     //}    
 
     /**
+     * Question 11
      * Returns the names of all Contacts associated with an Account.
      * Example: getContactNamesByAccount('001XXXXXXXXXXXX') should return the list of Contact LastNames for the Account with the Id
      * @param accountId The ID of the Account.
@@ -144,6 +155,7 @@ public with sharing class SOQL {
     }
 
     /**
+     * Question 12
      * Returns the total revenue for all Opportunities in a specific Stage or if the amount is greater than 10000.
      * Example: getTotalRevenueByStage('Closed Won') should return the total revenue for all Opportunities in the 'Closed Won' Stage.
      * @param stage The Stage value to filter Opportunities.
@@ -157,6 +169,7 @@ public with sharing class SOQL {
     }
 
     /**
+     * Question 13
      * Retrieves the first 10 Accounts ordered by Name.
      * @return A list of the first 10 Accounts ordered by Name.
      */
@@ -165,6 +178,7 @@ public with sharing class SOQL {
     }
     
     /**
+     * Question 14
      * Retrieves the Opportunities with an Amount greater than 100,000, ordered by CloseDate, and limited to 5 records.
      * @return A list of Opportunities with an Amount greater than 100,000, ordered by CloseDate, and limited to 5 records.
      */
@@ -173,6 +187,7 @@ public with sharing class SOQL {
     }
     
     /**
+     * Question 15
      * Retrieves the Contacts with the most recent Birthdate, ordered by Birthdate, and limited to 3 records.
      * @return A list of Contacts
      */
@@ -181,6 +196,7 @@ public with sharing class SOQL {
     }
     
     /**
+     * Question 16
      * Retrieves the Cases in the Open Status, ordered by CreatedDate, and limited to 10 records with an offset of 5.
      * @return A list of Cases
      */
@@ -189,6 +205,7 @@ public with sharing class SOQL {
     }
 
     /**
+     * Question 17
      * Returns Set of Case Ids for a specific Account.
      * Example: getCaseIdsByAccount('001XXXXXXXXXXXX') should return the set of Case Ids for the Account with the Id
      * @param accountId The ID of the Account.
@@ -207,6 +224,7 @@ public with sharing class SOQL {
     }
 
     /**
+     * Question 18
      * Return Map of Account Ids to Account Names Not in a specific Country.
      * Example: getAccountIdsToNamesNotInCountry('United States') should return the map of Account Ids to Account Names for Accounts that are not in the United States.
      * @param country The country to filter Accounts.
@@ -223,6 +241,7 @@ public with sharing class SOQL {
     }
 
     /**
+     * Question 19
      * Retrieves the Account Name for a given Contact.
      * Example: getAccountNameForContact('003XXXXXXXXXXXX') should return the Account Name for the Contact with the Id
      * @param contactId The Id of the Contact.
@@ -233,6 +252,7 @@ public with sharing class SOQL {
     }    
 
     /**
+     * Question 20
      * Returns single Account that has related opportunities in the same query
      * Example: getOpportunityAndAccountNamesForLineItem('001XXXXXXXXXXXX') should return the Account Name for the Account with the Id and all related Opportunities
      * @param accountId The ID of the Account.
@@ -243,6 +263,7 @@ public with sharing class SOQL {
     }
 
     /**
+     * Question 21
      * Retrieves all contacts that have the Mailing State similar to the Account Billing State.
      * Example: getAccountsWithContactsByState('001XXXXXXXXXXXX') should return a list of Contacts that have the same Mailing State as the Account with the Id
      * @param Account Id
@@ -258,6 +279,7 @@ public with sharing class SOQL {
     }
 
     /**
+     * Question 22
      * Extracts email domains from them leads, then finds Accounts with matching website domains
      * If Lead Email = test@test.com return account with website = www.test.com
      * Example: findContactsByLeadEmailDomains([set of lead ids]) should return a list of Accounts with matching email domains
@@ -283,6 +305,7 @@ public with sharing class SOQL {
     }
 
     /**
+     * Question 23
      * Clones and Inserts Opportunity Line Items from an original Opportunity to a list of cloned Opportunities.
      * Adds a randomized number between 1 to 3 to the quantity of each line item.
      * Example: cloneLineItems('001XXXXXXXXXXXX', [list of opportunity ids]) should clone the line items from the Opportunity with the Id to each Opportunity in the list
@@ -306,6 +329,7 @@ public with sharing class SOQL {
     }
     
     /**
+     * Question 24
      * Retrieves the Opportunity Name, Account Name, and Owner Name for Opportunities that have a Stage of 'Closed Won'.
      * Example: getOpportunityDetailsForClosedWon()
      * @return A list of filtered Opportunity
@@ -315,6 +339,7 @@ public with sharing class SOQL {
     }
 
     /**
+     * Question 25
      * Sets the 'Primary_Contact__c' field for the provided Opportunities from the first related Contact of the Account, ordered by first name.
      * Example: setPrimaryContact() should set the 'Primary_Contact__c' field for every Opportunity in the org
      * @param A list of 'Closed Won' Opportunities.

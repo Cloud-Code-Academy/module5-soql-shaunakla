@@ -1,11 +1,11 @@
 
-# Developer Kickstart Week 5: Salesforce Object Query Language (SOQL)
+# Developer Kickstart Module 5: Salesforce Object Query Language (SOQL)
 
-This project is part of the Developer Kickstart Week 5 curriculum at Cloud Code Academy. It's crafted to assist beginner Salesforce developers to learn and exercise Salesforce Object Query Language (SOQL), a pivotal aspect of the Apex programming language.
+This repository is part of the Developer Kickstart Module 5 curriculum at Cloud Code Academy. It's crafted to assist beginner Salesforce developers to learn and exercise Salesforce Object Query Language (SOQL), a pivotal aspect of the Apex programming language.
 
 ## Goals of the Practice
 
-In the course  of this practice project, you'll build essential knowledge about:
+In the course  of this practice repository, you'll build essential knowledge about:
 - Understanding the fundamentals of SOQL and its significance in Apex and Salesforce development.
 - Crafting basic SOQL queries using the SELECT statement to retrieve data from Salesforce objects.
 - Employing WHERE clause filters in SOQL queries to refine the data retrieved based on specific conditions.
@@ -19,14 +19,12 @@ By mastering SOQL, you will boost your ability to interact with Salesforce data 
 
 [Intermediate Setup Overview Video](https://vimeo.com/847130413/955b8bdbe2)
 
-To get started, you'll need a Salesforce Trailhead Playground. If you don't have one, you can create it for free from any Trailhead module.
-
-After you've set up your Trailhead Playground:
-
-1. Install Visual Studio Code from [here](https://code.visualstudio.com/download).
-2. Install Salesforce Extension Pack in Visual Studio Code. This can be done by searching 'Salesforce Extension Pack' in the Extensions view in VS Code and clicking Install.
-3. Authorize your Trailhead Playground in Visual Studio Code. Press `Ctrl + Shift + P` to open the command palette and type 'SFDX: Authorize an Org', then press Enter. Follow the steps in the browser to log in to your Playground, then return to VS Code.
-4. Deploy the Apex Class by right clicking on the `VariablesDatatypesOperators` and  `VariablesDatatypesOperatorsTest` file a using the option SFDX: Deploy Source to Org.
+## Getting Started Checklist
+1. Create/Configure a trailhead playground or developer org to do your work throughout this program.
+2. Install Visual Studio Code from [here](https://code.visualstudio.com/download).
+3. Install Salesforce Extension Pack in Visual Studio Code. This can be done by searching 'Salesforce Extension Pack' in the Extensions view in VS Code and clicking Install.
+4. Authorize your org in Visual Studio Code. Press `Ctrl + Shift + P` to open the command palette and type 'SFDX: Authorize an Org', then press Enter. Follow the steps in the browser to log in to your org, then return to VS Code.
+5. Make sure to save and deploy your changes into Salesforce from your local machine. This can be done through the command pallet or right clicking the file you want to deploy and using the option `SFDX: Deploy this source to org`
 
 ## Running the Test Classes
 
