@@ -267,7 +267,7 @@ public with sharing class SOQL {
      * Retrieves all contacts that have the Mailing State similar to the Account Billing State.
      * Example: getAccountsWithContactsByState('001XXXXXXXXXXXX') should return a list of Contacts that have the same Mailing State as the Account with the Id
      * @param Account Id
-     * @return A list of maps containing the Account's MailingState and the related Contacts.
+     * @return List of contacts with the same Mailing State as the Account Billing State
      */
     public static List<Contact> getAccountsWithContactsByState(Id accountId) {
         // Query the Account
