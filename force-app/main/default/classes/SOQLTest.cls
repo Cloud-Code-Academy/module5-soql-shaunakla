@@ -239,7 +239,7 @@ public with sharing class SOQLTest {
     }
 
     @IsTest
-    static void testGetLeadsBySourceOrDescription() {
+    static void testGetLeadsBySourceOrTitle() {
         // Create test data
         Lead testLead1 = new Lead(LastName = 'Test Lead 1', Company = 'Test Company 1', Phone = '1234567890', Email = 'lead1@email.com', LeadSource = 'Web', Title = 'Manager');
         Lead testLead2 = new Lead(LastName = 'Test Lead 2', Company = 'Test Company 2', Phone = '0987654321', Email = 'lead2@email.com', LeadSource = 'Phone', Title = 'Engineer Lead');

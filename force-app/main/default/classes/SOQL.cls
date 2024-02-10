@@ -128,7 +128,7 @@ public with sharing class SOQL {
      * @param leadSource The Lead Source to search for.
      * @param keyword The keyword to search for in the Lead Title.
      * @return A list of Lead records.
-     * Update the corresponding test class and testGetLeadsBySourceOrDescription method to cover this method
+     * Update the corresponding test class and testGetLeadsBySourceOrTitle method to cover this method
      */
     //[public | private ] [static] data_type method_name (input parameters) {
     //  The body of the method
