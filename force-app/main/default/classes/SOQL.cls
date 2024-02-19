@@ -283,7 +283,7 @@ public with sharing class SOQL {
      * Extracts email domains from them leads, then finds Accounts with matching website domains
      * If Lead Email = test@test.com return account with website = www.test.com
      * Example: findContactsByLeadEmailDomains([set of lead ids]) should return a list of Accounts with matching email domains
-     * @param A list of Lead Ids.
+     * @param A set of Lead Ids.
      * @return A list of Accounts with matching email domains.
      */
     public static List<Account> findContactsByLeadEmailDomains(Set<Id> leadIds) {
@@ -340,9 +340,8 @@ public with sharing class SOQL {
 
     /**
      * Question 25
-     * Sets the 'Primary_Contact__c' field for the provided Opportunities from the first related Contact of the Account, ordered by first name.
+     * Sets the 'Primary_Contact__c' field for all Closed Won Opportunities to first Contact on the Account.
      * Example: setPrimaryContact() should set the 'Primary_Contact__c' field for every Opportunity in the org
-     * @param A list of 'Closed Won' Opportunities.
      */
     public static void setPrimaryContact() {
         //Use the getOpportunityDetailsForClosedWon() method to get the Opportunities
