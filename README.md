@@ -15,9 +15,7 @@ In the course  of this practice repository, you'll build essential knowledge abo
 By mastering SOQL, you will boost your ability to interact with Salesforce data programmatically, enabling you to build dynamic, data-driven applications on the Salesforce platform. These concepts lay the foundation for advanced data manipulation and handling techniques in Salesforce.
 
 ## Setup
-[Beginner Setup Overview Video](https://vimeo.com/839597882/46fc06d93e)
-
-[Intermediate Setup Overview Video](https://vimeo.com/847130413/955b8bdbe2)
+[Setup Overview](https://learn.cloudcodeacademy.com/courses/salesforce-developer-kickstart-program/lectures/47317665)
 
 ## Getting Started Checklist
 1. Create/Configure a trailhead playground or developer org to do your work throughout this program.
