@@ -515,7 +515,7 @@ public with sharing class SOQLTest {
     }
 
     @IsTest
-    static void testGetOpportunityAndAccountNamesForLineItem() {
+    static void testGetAccountAndOpportunitiesFromAccountId() {
         // Create test data
         Account testAccount1 = new Account(Name = 'Test Account 1');
         insert testAccount1;
@@ -525,7 +525,7 @@ public with sharing class SOQLTest {
         insert new List<Opportunity>{testOpp1, testOpp2};
         
         // Call the method to test
-        Account accountWithOpps = SOQL.getOpportunityAndAccountNamesForLineItem(testAccount1.Id);
+        Account accountWithOpps = SOQL.getAccountAndOpportunitiesFromAccountId(testAccount1.Id);
     
         // Assert that the returned account is correct
         System.assertEquals(testAccount1.Id, accountWithOpps.Id, 'Returned account is incorrect.');

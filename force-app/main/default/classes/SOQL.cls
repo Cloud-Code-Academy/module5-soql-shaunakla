@@ -254,11 +254,11 @@ public with sharing class SOQL {
     /**
      * Question 20
      * Returns single Account that has related opportunities in the same query
-     * Example: getOpportunityAndAccountNamesForLineItem('001XXXXXXXXXXXX') should return the Account Name for the Account with the Id and all related Opportunities
+     * Example: getAccountAndOpportunitiesFromAccountId('001XXXXXXXXXXXX') should return the Account Name for the Account with the Id and all related Opportunities
      * @param accountId The ID of the Account.
      * @return An Account record with related Opportunities.
      */
-    public static Account getOpportunityAndAccountNamesForLineItem(Id accountId) {
+    public static Account getAccountAndOpportunitiesFromAccountId(Id accountId) {
         return null; // Replace null with the variable you used to store the result
     }
 
