@@ -585,7 +585,7 @@ public with sharing class SOQLTest {
     }
 
     @IsTest
-    static void testFindContactsByLeadEmailDomains() {
+    static void testFindAccountsByLeadEmailDomains() {
         // Create test data
         // Generate random number of leads between 1 and 10
         List<String> domains = new List<String>{'example.com', 'test.com', 'other.com'};
@@ -627,7 +627,7 @@ public with sharing class SOQLTest {
         Lead testLead = leads[(Integer)Math.floor(Math.random() * leads.size())];
         String testLeadDomain = testLead.Email.split('@')[1];
         Set<Id> leadIds = new Set<Id>{testLead.Id};
-        List<Account> matchedAccounts = SOQL.findContactsByLeadEmailDomains(leadIds);
+        List<Account> matchedAccounts = SOQL.findAccountsByLeadEmailDomains(leadIds);
         System.debug([SELECT Id, Website FROM Account]);
         System.debug(testLeadDomain);
         System.debug(domainToAccount.get(testLeadDomain));

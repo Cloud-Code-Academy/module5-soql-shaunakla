@@ -282,11 +282,11 @@ public with sharing class SOQL {
      * Question 22
      * Extracts email domains from them leads, then finds Accounts with matching website domains
      * If Lead Email = test@test.com return account with website = www.test.com
-     * Example: findContactsByLeadEmailDomains([set of lead ids]) should return a list of Accounts with matching email domains
+     * Example: findAccountsByLeadEmailDomains([set of lead ids]) should return a list of Accounts with matching email domains
      * @param A set of Lead Ids.
      * @return A list of Accounts with matching email domains.
      */
-    public static List<Account> findContactsByLeadEmailDomains(Set<Id> leadIds) {
+    public static List<Account> findAccountsByLeadEmailDomains(Set<Id> leadIds) {
         // Query the Leads
 
         // Create a set of email domains from the Leads
